@@ -1,0 +1,31 @@
+[ CA_default ]
+copy_extensions = copy
+ 
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+ 
+[req_distinguished_name]
+# 国家
+C = CN
+# 省份
+ST = Shenzhen
+# 城市
+L = Shenzhen
+# 组织
+O = Arvin
+# 部门
+OU = Arvin
+# 域名
+CN = kmsm.qualstor.com
+ 
+[v3_req]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+ 
+[alt_names]
+# 解析域名
+DNS.1 = kmsm.qualstor.com
+# 可配置多个域名，如下
